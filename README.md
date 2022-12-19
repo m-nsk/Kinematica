@@ -1,3 +1,3 @@
 # Kinematica
-### Kinematics calculator
+### Kinematics Calculator
 Inelastic/Elastic Collisions, Projectile Motion, etc.
