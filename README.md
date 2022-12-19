@@ -1,3 +1,2 @@
 # Kinematica
-### Kinematics Calculator
-Inelastic/Elastic Collisions, Projectile Motion, etc.
+A kinematics calculator for collisions, projectile motion, etc.
