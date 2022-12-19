@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kinematica</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
-    <style>
+    <!-- <style>
         body {
             font-family: "Computer Modern Serif", serif;
         }
@@ -15,7 +16,7 @@
         input {
             font-family: "Computer Modern Serif Bold", serif;
         }
-    </style>
+    </style> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
         integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
 
@@ -28,13 +29,24 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
         integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+    <script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/e76cc909c4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Calculator</h1>
+    <h1>Kinematica</h1>
+    <h3 class="author">A Kinematics Calculator</h3>
+    <div class="author">
+        <button id="dark-mode-toggle" style="border: none;"><i class="fa-solid fa-sun"></i></button>
+    </div>
+    <h3>Table of Contents</h3>
+    <ul>
+        <li><a href="#ic">Inelastic Collision</a></li>
+        <li><a href="#ec">Elastic Collision</a></li>
+    </ul>
 
     <!-- Inelastic Collision -->
-    <h2>Inelastic Collision</h2>
+    <h3 id="ic">Inelastic Collision</h3>
     $$m_{1}v_{1i} + m_{2}v_{2i} = (m_1 + m_2)v_{f}$$
     <label for="i-m1"><i>m</i><sub>1</label>
     <input id="i-m1" type="text" data-i-m1>
@@ -49,7 +61,7 @@
     <br>
 
     <!-- Elastic Collision -->
-    <h2>Elastic Collision</h2>
+    <h3 id="ec">Elastic Collision</h3>
     $$m_{1}v_{1i} + m_{2}v_{2i} = m_{1}v_{1f} + m_{2}v_{2f}$$
     <label for="e-m1"><i>m</i><sub>1</label>
     <input id="e-m1" type="text" data-e-m1>
@@ -72,5 +84,8 @@
     <input id="e-v2f" type="text" data-e-v2f>
 
 </body>
+<footer>
+    <p></p>
+</footer>
 
 </html>
