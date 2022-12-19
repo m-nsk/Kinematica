@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+    <style>
+        body {
+            font-family: "Computer Modern Serif", serif;
+        }
+
+        input {
+            font-family: "Computer Modern Serif Bold", serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+        integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+        integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+
+    <!-- Inelastic Collision -->
+    <h2>Inelastic Collision</h2>
+    $$m_{1}v_{1i} + m_{2}v_{2i} = (m_1 + m_2)v_{f}$$
+    <label for="i-m1"><i>m</i><sub>1</label>
+    <input id="i-m1" type="text" data-i-m1>
+    <label for="i-v1i"><i>v</i><sub>1<i>i</sub></i></label>
+    <input id="i-v1i" type="text" data-i-v1i>
+    <br>
+    <label for="i-m2"><i>m</i><sub>2</label>
+    <input id="i-m2" type="text" data-i-m2>
+    <label for="i-v2i"><i>v</i><sub>2<i>i</sub></i></label>
+    <input id="i-v2i" type="text" data-i-v2i>
+    <br>
+    <br>
+
+    <!-- Elastic Collision -->
+    <h2>Elastic Collision</h2>
+    $$m_{1}v_{1i} + m_{2}v_{2i} = m_{1}v_{1f} + m_{2}v_{2f}$$
+    <label for="e-m1"><i>m</i><sub>1</label>
+    <input id="e-m1" type="text" data-e-m1>
+
+    <label for="e-v1i"><i>v</i><sub>1<i>i</sub></i></label>
+    <input id="e-v1i" type="text" data-e-v1i>
+    <br>
+
+    <label for="e-m2"><i>m</i><sub>2</label>
+    <input id="e-m2" type="text" data-e-m2>
+
+    <label for="e-v2i"><i>v</i><sub>2<i>i</sub></i></label>
+    <input id="e-v2i" type="text" data-e-v2i>
+    <br>
+    <br>
+    <label for="e-v1f"><i>v</i><sub>1<i>f</sub></i></label>
+    <input id="e-v1f" type="text" data-e-v1f>
+
+    <label for="ev2f"><i>v</i><sub>2<i>f</sub></i></label>
+    <input id="e-v2f" type="text" data-e-v2f>
+
+</body>
+
+</html>
