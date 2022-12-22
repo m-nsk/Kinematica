@@ -1,24 +1,11 @@
 // Classes
 class InelasticCollision {
     constructor(m1, m2, v1i, v2i, vf) {
-        this._m1 = m1;
-        this._m2 = m2;
-        this._v1i = v1i;
-        this._v2i = v2i;
-        this._vf = vf;
-    }
-    // Getters
-    get m1() {
-        return this._m1;
-    }
-    get m2() {
-        return this._m2;
-    }
-    get v1i() {
-        return this._v1i;
-    }
-    get v2i() {
-        return this._v2i;
+        this.m1 = m1;
+        this.m2 = m2;
+        this.v1i = v1i;
+        this.v2i = v2i;
+        this.vf = vf;
     }
 
     // find empty box
@@ -40,12 +27,8 @@ class InelasticCollision {
         if (this.vf == "") {
             empty.push("vf");
         }
-        if (empty.length == 0) {
-            alert("Please leave one box empty.");
-            return false;
-        }
-        if (empty.length > 1) {
-            return "error"
+        if (empty.length != 1) {
+            return 0;
         }
         return empty[0];
 
@@ -60,7 +43,7 @@ class InelasticCollision {
             this.m1 = this.m2 * (this.vf - this.v2i) / (this.v1i - this.vf);
             document.getElementById("i-m1").value = this.m1;
         } else if (empty == "m2") {
-            
+
         } else if (empty == "v1i") {
 
         } else if (empty == "v2i") {
@@ -83,6 +66,7 @@ function calculateIC() {
         document.getElementById("i-v2i").value,
         document.getElementById("i-vf").value
     );
+    // alert(inelasticCollision.m1 + " " + inelasticCollision.m2 + " " + inelasticCollision.v1i + " " + inelasticCollision.v2i + " " + inelasticCollision.vf);
     inelasticCollision.calculate();
 }
 
