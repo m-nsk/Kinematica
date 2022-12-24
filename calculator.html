@@ -51,36 +51,43 @@
     $$m_{1}v_{1i} + m_{2}v_{2i} = (m_1 + m_2)v_{f}$$
     <div class="abstract">
         <label for="i-m1"><i>m</i><sub>1</label>
-            <input id="i-m1" type="text" data-i-m1>
-            <label for="i-v1i"><i>v</i><sub>1<i>i</sub></i></label>
-            <input id="i-v1i" type="text" data-i-v1i>
-            <br>
-            <label for="i-m2"><i>m</i><sub>2</label>
-                <input id="i-m2" type="text" data-i-m2>
-                <label for="i-v2i"><i>v</i><sub>2<i>i</sub></i></label>
-                <input id="i-v2i" type="text" data-i-v2i>
-                <br>
-                <br>
-                <label for="i-vf"><i>v</i><sub><i>f</sub></i></label>
-                <input id="i-vf" type="text" data-i-vf>
-                <br>
-                <br>
-                <button id="calculate-ic">Calculate</button>
+        <input id="i-m1" type="text" data-i-m1>
+        <label for="i-v1i"><i>v</i><sub>1<i>i</sub></i></label>
+        <input id="i-v1i" type="text" data-i-v1i>
+        <br>
+        <label for="i-m2"><i>m</i><sub>2</label>
+        <input id="i-m2" type="text" data-i-m2>
+        <label for="i-v2i"><i>v</i><sub>2<i>i</sub></i></label>
+        <input id="i-v2i" type="text" data-i-v2i>
+        <br>
+        <br>
+        <label for="i-vf"><i>v</i><sub><i>f</sub></i></label>
+        <input id="i-vf" type="text" data-i-vf>
+        <br>
+        <br>
+        <button id="calculate-ic">Calculate</button>
         <!-- onclick="alert('Test')" -->
     </div>
     <br>
 
     <!-- Elastic Collision -->
     <h3 id="ec">Elastic Collision</h3>
-    <p>Leave a field empty to solve for its value.</p>
+    <p>Formulas useful for elastic collision:</p>
+    <p style="text-align: center">Conservation of Momentum</p>
     $$m_{1}v_{1i} + m_{2}v_{2i} = m_{1}v_{1f} + m_{2}v_{2f}$$
+    <p style="text-align: center">Conservation of Kinetic Energy</p>
+    $$\frac{1}{2}m_1v_{1i}^2 + \frac{1}{2}m_2v_{2i}^2 = \frac{1}{2}m_1v_{1f}^2 + \frac{1}{2}m_2v_{2f}^2$$
+    <p style="text-align: center">Final velocities of a collision</p>
+    $$v_{1f} = \frac{m_1 - m_2}{m_1 + m_2}v_{1i} + \frac{2m_2}{m_1 + m_2}v_{2i}$$
+    $$v_{2f} = \frac{2m_1}{m_1 + m_2}v_{1i} + \frac{m_2 - m_1}{m_1 + m_2}v_{2i}$$
+    
     <div class="abstract">
         <label for="e-m1"><i>m</i><sub>1</label>
-            <input id="e-m1" type="text" data-e-m1>
-            
-            <label for="e-v1i"><i>v</i><sub>1<i>i</sub></i></label>
-            <input id="e-v1i" type="text" data-e-v1i>
-            <br>
+        <input id="e-m1" type="text" data-e-m1>
+
+        <label for="e-v1i"><i>v</i><sub>1<i>i</sub></i></label>
+        <input id="e-v1i" type="text" data-e-v1i>
+        <br>
 
         <label for="e-m2"><i>m</i><sub>2</label>
         <input id="e-m2" type="text" data-e-m2>
