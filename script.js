@@ -36,7 +36,7 @@ class InelasticCollision {
 
     calculate() {
         const empty = this.findEmpty();
-        
+
         // convert to number for calculations
         this.m1 = Number(this.m1);
         this.m2 = Number(this.m2);
@@ -46,35 +46,26 @@ class InelasticCollision {
 
         // conditional calculations
         if (empty == "m1") {
-            // m1v1i + m2v2i = m1vf + m2vf
-            // m1v1i - m1vf = m2vf - m2v2i
-            // m1 = m2(vf - v2i) / (v1i - vf)
             this.m1 = this.m2 * (this.vf - this.v2i) / (this.v1i - this.vf);
             document.getElementById("i-m1").value = this.m1;
-        } else if (empty == "m2") {
-            // m1v1i + m2v2i = m1vf + m2vf
-            // m2v2i - m2vf = m1vf - m1v1i
-            // m2 = m1(vf - v1i) / (v2i - vf)
+        }
+        else if (empty == "m2") {
             this.m2 = this.m1 * (this.vf - this.v1i) / (this.v2i - this.vf);
             document.getElementById("i-m2").value = this.m2;
-        } else if (empty == "v1i") {
-            // m1v1i + m2v2i = m1vf + m2vf
-            // m1v1i = m1vf + m2vf - m2v2i
-            // v1i = (m1vf + m2vf - m2v2i) / m1
+        }
+        else if (empty == "v1i") {
             this.v1i = (this.m1 * this.vf + this.m2 * this.vf - this.m2 * this.v2i) / this.m1;
             document.getElementById("i-v1i").value = this.v1i;
-        } else if (empty == "v2i") {
-            // m1v1i + m2v2i = m1vf + m2vf
-            // m2v2i = m1vf + m2vf - m1v1i
-            // v2i = (m1vf + m2vf - m1v1i) / m2
+        }
+        else if (empty == "v2i") {
             this.v2i = (this.m1 * this.vf + this.m2 * this.vf - this.m1 * this.v1i) / this.m2;
             document.getElementById("i-v2i").value = this.v2i;
-        } else if (empty == "vf") {
-            // m1v1i + m2v2i = (m1 + m2)vf
-            // vf = (m1v1i + m2v2i) / (m1 + m2)
+        }
+        else if (empty == "vf") {
             this.vf = (this.m1 * this.v1i + this.m2 * this.v2i) / (this.m1 + this.m2);
             document.getElementById("i-vf").value = this.vf;
-        } else {
+        }
+        else {
             alert("Please leave one box empty.");
         }
     }
@@ -89,9 +80,9 @@ function calculateIC() {
         document.getElementById("i-v2i").value,
         document.getElementById("i-vf").value
     );
-    // alert(inelasticCollision.m1 + " " + inelasticCollision.m2 + " " + inelasticCollision.v1i + " " + inelasticCollision.v2i + " " + inelasticCollision.vf);
     inelasticCollision.calculate();
 }
+
 
 // Dark mode toggle
 document
