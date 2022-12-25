@@ -122,13 +122,13 @@ class ElasticCollision {
         this.v2f = Number(this.v2f);
 
         // conditional calculations
-        if (empty == [v1f, v2f]) {
+        if (empty.includes("v1f") && empty.includes("v2f")) {
             this.v1f = (this.m1 - this.m2) / (this.m1 + this.m2) * this.v1i + (2 * this.m2) / (this.m1 + this.m2) * this.v2i;
             this.v2f = (2 * this.m1) / (this.m1 + this.m2) * this.v1i + (this.m2 - this.m1) / (this.m1 + this.m2) * this.v2i;
             document.getElementById("e-v1f").value = this.v1f;
             document.getElementById("e-v2f").value = this.v2f;
         }
-        if (empty == [v1i, v2i]) {
+        if (empty.includes("v1i") && empty.includes("v2i")) {
             this.v1i = (this.m1 - this.m2) / (this.m1 + this.m2) * this.v1f + (2 * this.m2) / (this.m1 + this.m2) * this.v2f;
             this.v2i = (2 * this.m1) / (this.m1 + this.m2) * this.v1f + (this.m2 - this.m1) / (this.m1 + this.m2) * this.v2f;
             document.getElementById("e-v1i").value = this.v1i;
