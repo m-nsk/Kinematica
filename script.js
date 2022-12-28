@@ -118,8 +118,13 @@ class ElasticCollision {
         this.v1f = Number(this.v1f);
         this.v2f = Number(this.v2f);
 
+        // error cases
+        if (this.v1i <= this.v2i && this.v1i != 0) {
+            alert("v1i must be greater than v2i.");
+        }
+
         // conditional calculations
-        if (empty.includes("v1f") && empty.includes("v2f")) {
+        else if (empty.includes("v1f") && empty.includes("v2f")) {
             this.v1f = (this.m1 - this.m2) / (this.m1 + this.m2) * this.v1i + (2 * this.m2) / (this.m1 + this.m2) * this.v2i;
             this.v2f = (2 * this.m1) / (this.m1 + this.m2) * this.v1i + (this.m2 - this.m1) / (this.m1 + this.m2) * this.v2i;
             document.getElementById("e-v1f").value = this.v1f;
