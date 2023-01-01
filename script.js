@@ -191,6 +191,11 @@ function calculateEC() {
     elasticCollision.calculate();
 }
 
+// Projectile Motion 1 Canvas
+function pm1() {
+    // TODO
+}
+
 
 // Dark mode toggle
 document
@@ -217,3 +222,4 @@ m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = y + "-" + m + "-" + d;
 */
+
