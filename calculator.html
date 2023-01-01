@@ -17,19 +17,11 @@
             font-family: "Computer Modern Serif Bold", serif;
         }
     </style> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-        integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
-        integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
-        crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
-        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+    <!-- MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Custom Scripts -->
     <script defer src="script.js"></script>
+    <!-- FontAwesome -->
     <script defer src="https://kit.fontawesome.com/e76cc909c4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -41,7 +33,7 @@
     </div>
     <h3>Table of Contents</h3>
     <ul>
-        <li><a href="#pm">Projectile Motion</a></li>
+        <li><a href="#pm1">Projectile Motion</a></li>
         <li><a href="#ic">Inelastic Collision</a></li>
         <li><a href="#ec">Elastic Collision</a></li>
     </ul>
@@ -89,7 +81,7 @@
     <p style="text-align: center">Final velocities of a collision</p>
     $$v_{1f} = \frac{m_1 - m_2}{m_1 + m_2}v_{1i} + \frac{2m_2}{m_1 + m_2}v_{2i}$$
     $$v_{2f} = \frac{2m_1}{m_1 + m_2}v_{1i} + \frac{m_2 - m_1}{m_1 + m_2}v_{2i}$$
-    
+
     <div class="abstract">
         <label for="e-m1"><i>m</i><sub>1</label>
         <input id="e-m1" type="text">
