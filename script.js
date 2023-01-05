@@ -192,9 +192,35 @@ function calculateEC() {
 }
 
 // Projectile Motion 1 Canvas
-function pm1() {
-    // TODO
+function plotPM1(theta, v0, h) {
+    var v0x = v0 * Math.cos(theta);
+    var v0y = v0 * Math.sin(theta);
+    var t = 0;
+    var x = [];
+    var y = [];
+    while (y[y.length - 1] >= 0) {
+        x.push(v0x * t);
+        y.push(h + v0y * t - 0.5 * g * t ^ 2);
+        t += 0.1;
+    }
+    MathJax.tex2svg(`\\[x = ${v0x}t\\]`, function (xSvg) {
+        MathJax.tex2svg(`\\[y = ${h} + ${v0y}t - 0.5g${t}^2\\]`, function (ySvg) {
+            // Add SVG objects to the page
+            document.body.appendChild(xSvg);
+            document.body.appendChild(ySvg);
+        });
+    });
 }
+plotPM1(45, 10, 100);
+
+document
+    .querySelector("test-plot")
+    .addEventListener('click', () => {
+        // Test projectile
+        plotPM1(45, 10, 100);
+    })
+// Test projectile
+plotProjectile(45, 10, 100);
 
 
 // Dark mode toggle
